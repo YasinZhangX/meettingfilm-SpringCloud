@@ -6,7 +6,6 @@
     <groupId>com.yasin.meetingfilm</groupId>
     <artifactId>backend-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>com.yasin.meetingfile</groupId>
   <artifactId>backend-common</artifactId>
@@ -62,12 +61,6 @@
         <directory>src/main/resources</directory>
         <filtering>true</filtering>
       </resource>
-<!--      <resource>-->
-<!--        <directory>src/main/java</directory>-->
-<!--        <includes>-->
-<!--          <include>**/*.xml</include>-->
-<!--        </includes>-->
-<!--      </resource>-->
     </resources>
   </build>
 </project>
