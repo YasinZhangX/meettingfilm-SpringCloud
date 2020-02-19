@@ -1,11 +1,12 @@
-package com.yasin.meetingfilm.backend.common.backend.user;
+package com.yasin.meetingfilm.backend.user.dao;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.yasin.meetingfilm.backend.common.BackendCommonApplicationTest;
-import com.yasin.meetingfilm.backend.common.dao.entity.MoocBackendUserT;
-import com.yasin.meetingfilm.backend.common.dao.mapper.MoocBackendUserTMapper;
+import com.yasin.meetingfilm.backend.user.BackendUserApplicationTests;
+import com.yasin.meetingfilm.backend.user.dao.entity.MoocBackendUserT;
+import com.yasin.meetingfilm.backend.user.dao.mapper.MoocBackendUserTMapper;
+import com.yasin.meetingfilm.backend.utils.MD5Util;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Resource;
@@ -14,21 +15,19 @@ import java.util.List;
 /**
  * @author Yasin Zhang
  */
-public class UserTest extends BackendCommonApplicationTest {
+public class UserTest extends BackendUserApplicationTests {
 
     @Resource
     private MoocBackendUserTMapper backendUser;
 
     @Test
     public void add() {
-        for (int i = 1; i < 5; i++) {
-            MoocBackendUserT user = new MoocBackendUserT();
-            user.setUserName("test"+i);
-            user.setUserPwd("test"+i);
-            user.setUserPhone("123000000"+i);
+        MoocBackendUserT user = new MoocBackendUserT();
+        user.setUserName("admin");
+        user.setUserPwd(MD5Util.encrypt("admin"));
+        user.setUserPhone("123000000");
 
-            backendUser.insert(user);
-        }
+        backendUser.insert(user);
     }
 
     @Test
@@ -48,7 +47,7 @@ public class UserTest extends BackendCommonApplicationTest {
         queryWrapper.eq("user_name", "test1");
         List<MoocBackendUserT> users = backendUser.selectList(queryWrapper);
         users.forEach(
-                System.out::println
+            System.out::println
         );
     }
 
@@ -63,11 +62,6 @@ public class UserTest extends BackendCommonApplicationTest {
     }
 
     @Test
-    public void delete() {
-        backendUser.deleteById(8);
-    }
-
-    @Test
     public void selectByPage() {
         // 分页
         Page<MoocBackendUserT> page = new Page<>(1, 3);
@@ -78,13 +72,15 @@ public class UserTest extends BackendCommonApplicationTest {
         queryWrapper.like("user_name", "test");
         IPage<MoocBackendUserT> iPage = backendUser.selectPage(page, queryWrapper);
         iPage.getRecords().forEach(
-                System.out::println
+            System.out::println
         );
     }
 
     @Test
-    public void selectByUserName() {
-        MoocBackendUserT user = backendUser.selectUserByUserName("test1");
-        System.out.println("user: " + user);
+    public void delete() {
+        QueryWrapper<MoocBackendUserT> queryWrapper = new QueryWrapper<>();
+        queryWrapper.like("user_name", "test");
+        int result = backendUser.delete(queryWrapper);
+        System.out.println("delete line: " + result);
     }
 }

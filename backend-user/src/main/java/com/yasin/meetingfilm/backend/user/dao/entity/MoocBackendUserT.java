@@ -1,7 +1,9 @@
-package com.yasin.meetingfilm.backend.common.dao.entity;
+package com.yasin.meetingfilm.backend.user.dao.entity;
+
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
+
 import java.io.Serializable;
 /**
  * <p>
@@ -9,7 +11,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author yasin
- * @since 2020-02-17
+ * @since 2020-02-18
  */
 public class MoocBackendUserT extends Model<MoocBackendUserT> {
 

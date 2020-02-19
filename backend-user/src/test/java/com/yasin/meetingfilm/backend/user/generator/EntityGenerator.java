@@ -1,4 +1,4 @@
-package com.yasin.meetingfilm.backend.common.generator;
+package com.yasin.meetingfilm.backend.user.generator;
 
 
 import com.baomidou.mybatisplus.generator.AutoGenerator;
@@ -20,7 +20,7 @@ import java.util.Map;
 public class EntityGenerator {
 
     // 生成输出目录，定位到工程的java目录下
-    private String outputDir = "D:\\Learning Files\\Java\\workspace\\backend-parent\\backend-common\\src\\test\\java";
+    private String outputDir = "D:\\Learning Files\\Java\\workspace\\backend-parent\\backend-user\\src\\main\\java";
     // 生成类的作者
     private String author = "yasin";
     // 数据源相关配置
@@ -29,7 +29,7 @@ public class EntityGenerator {
     private String userName = "yasin";
     private String userPwd = "Password@123";
     // DAO的包路径
-    private String daoPackage = "com.yasin.meetingfilm.backend.common.dao";
+    private String daoPackage = "com.yasin.meetingfilm.backend.user.dao";
     // 待生成的表名，注意是覆盖更新
     private static String[] tableNames;
 

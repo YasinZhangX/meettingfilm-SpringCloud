@@ -11,11 +11,14 @@
   <groupId>com.yasin.meetingfilm</groupId>
   <artifactId>backend-parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
   <name>backend-parent</name>
   <description>meetingfilm 后端运维工程</description>
 
   <modules>
     <module>backend-common</module>
+    <module>backend-utils</module>
+    <module>backend-user</module>
   </modules>
 
   <properties>
@@ -26,6 +29,9 @@
     <mysql.version>8.0.13</mysql.version>
     <beetl.version>2.9.10</beetl.version>
     <log4j.version>1.2.17</log4j.version>
+    <guava.version>28.1-jre</guava.version>
+    <fastjson.version>1.2.60</fastjson.version>
+    <jjwt.version>0.9.0</jjwt.version>
   </properties>
 
   <dependencies>
@@ -77,6 +83,18 @@
         <scope>import</scope>
       </dependency>
 
+      <dependency>
+        <groupId>com.yasin.meetingfilm</groupId>
+        <artifactId>backend-utils</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.yasin.meetingfilm</groupId>
+        <artifactId>backend-common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
       <!-- mybatis-plus依赖 -->
       <dependency>
         <groupId>com.baomidou</groupId>
@@ -116,6 +134,27 @@
         <groupId>log4j</groupId>
         <artifactId>log4j</artifactId>
         <version>${log4j.version}</version>
+      </dependency>
+
+      <!-- guava支持 -->
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+
+      <!-- JSON处理 -->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fastjson.version}</version>
+      </dependency>
+
+      <!-- JWT依赖 -->
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>${jjwt.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
