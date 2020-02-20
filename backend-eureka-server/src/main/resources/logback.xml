@@ -1,0 +1,15 @@
+<configuration>
+  <!--自定义颜色配置-->
+  <conversionRule conversionWord="customColor" converterClass="com.yasin.meetingfilm.backend.eureka.config.LogbackColorful"/>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+      <encoder>
+          <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %customColor(%5level) ${PID:- } --- [%white(%15.15thread)] %cyan(%-40.40logger{40}) : %msg%n</pattern>
+          <charset>UTF-8</charset>
+      </encoder>
+  </appender>
+
+  <root level="info">
+      <appender-ref ref="STDOUT" />
+  </root>
+</configuration>

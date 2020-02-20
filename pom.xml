@@ -19,6 +19,8 @@
     <module>backend-common</module>
     <module>backend-utils</module>
     <module>backend-user</module>
+    <module>backend-eureka-server</module>
+    <module>backend-testplatform</module>
   </modules>
 
   <properties>
@@ -156,6 +158,7 @@
         <artifactId>jjwt</artifactId>
         <version>${jjwt.version}</version>
       </dependency>
+
     </dependencies>
   </dependencyManagement>
 
