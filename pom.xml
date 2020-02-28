@@ -19,6 +19,7 @@
     <module>backend-common</module>
     <module>backend-utils</module>
     <module>backend-user</module>
+    <module>backend-film</module>
     <module>backend-eureka-server</module>
     <module>backend-testplatform</module>
   </modules>

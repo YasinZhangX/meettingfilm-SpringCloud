@@ -1,9 +1,9 @@
 server:
-  port: 7001
+  port: 7002
 
 spring:
   application:
-    name: user-service
+    name: film-service
 
   datasource:
     url: jdbc:mysql://47.108.82.29:3306/meetingfilm?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=UTC
