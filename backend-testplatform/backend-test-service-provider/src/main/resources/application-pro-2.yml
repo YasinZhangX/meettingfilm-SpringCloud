@@ -1,14 +1,15 @@
 server:
-  port: 7800
+  port: 7659
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
+
 spring:
   application:
-    name: hello-service-consumer
+    name: hello-service-provider
 
 logging:
   config: classpath:logback.xml
