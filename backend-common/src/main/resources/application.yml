@@ -11,7 +11,10 @@ spring:
     username: yasin
     password: Password@123
     filters: log4j,wall,mergeStat
-
+  mvc:
+    view:
+      prefix: classpath:/templates/  # 定位模板的目录
+      suffix: .html
 
 logging:
   config: classpath:logback.xml

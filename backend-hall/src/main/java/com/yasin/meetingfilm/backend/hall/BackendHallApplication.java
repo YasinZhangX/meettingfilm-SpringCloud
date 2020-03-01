@@ -1,4 +1,4 @@
-package com.yasin.meetingfilm.backend.user;
+package com.yasin.meetingfilm.backend.hall;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -9,11 +9,11 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableDiscoveryClient
 @SpringBootApplication
 @ComponentScan(basePackages = "com.yasin.meetingfilm")
-@MapperScan(basePackages = {"com.yasin.meetingfilm.backend.user.dao.mapper"})
-public class BackendUserApplication {
+@MapperScan(basePackages = {"com.yasin.meetingfilm.backend.hall.dao.mapper"})
+public class BackendHallApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(BackendUserApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(BackendHallApplication.class, args);
+	}
 
 }

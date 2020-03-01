@@ -17,6 +17,12 @@
   </properties>
 
   <dependencies>
+    <!-- 静态页面支持 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+
     <!-- 公共工具类支持 -->
     <dependency>
       <groupId>com.yasin.meetingfilm</groupId>
