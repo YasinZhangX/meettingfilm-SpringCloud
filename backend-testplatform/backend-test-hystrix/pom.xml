@@ -4,20 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.yasin.meetingfilm</groupId>
-    <artifactId>backend-parent</artifactId>
+    <artifactId>backend-testplatform</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>backend-testplatform</artifactId>
+  <artifactId>backend-test-hystrix</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>backend-testplatform</name>
-  <description>后端测试平台</description>
-
-  <modules>
-    <module>backend-test-service-provider</module>
-    <module>backend-test-service-consumer</module>
-    <module>backend-test-hystrix</module>
-  </modules>
+  <name>backend-test-hystrix</name>
+  <description>hystrix demo</description>
 
   <properties>
     <java.version>1.8</java.version>
@@ -25,8 +18,14 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+      <groupId>com.netflix.hystrix</groupId>
+      <artifactId>hystrix-core</artifactId>
+      <version>1.5.18</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.yasin.meetingfilm</groupId>
+      <artifactId>backend-common</artifactId>
     </dependency>
   </dependencies>
 

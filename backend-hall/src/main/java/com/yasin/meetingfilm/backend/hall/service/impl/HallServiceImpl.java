@@ -14,7 +14,6 @@ import com.yasin.meetingfilm.backend.hall.dao.mapper.MoocFieldTMapper;
 import com.yasin.meetingfilm.backend.hall.dao.mapper.MoocHallFilmInfoTMapper;
 import com.yasin.meetingfilm.backend.hall.service.IHallService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -72,15 +71,9 @@ public class HallServiceImpl implements IHallService {
     }
 
     private MoocHallFilmInfoT describeFilmInfo(Integer filmId) throws CommonServiceException {
-        // 获取注册信息
-        ServiceInstance choose = eurekaClient.choose("film-service");
         // 组织调用参数
-        String hostName = choose.getHost();
-        int port = choose.getPort();
-
         String uri = "/films/" + filmId;
-
-        String url = "http://" + hostName + ":" + port + uri;
+        String url = "http://film-service" + uri;
 
         // 调用影片服务
         JSONObject baseRespVO = restTemplate.getForObject(url, JSONObject.class);
