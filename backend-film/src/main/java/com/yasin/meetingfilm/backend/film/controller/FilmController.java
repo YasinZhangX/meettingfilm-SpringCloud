@@ -2,11 +2,11 @@ package com.yasin.meetingfilm.backend.film.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.google.common.collect.Maps;
+import com.yasin.meetingfilm.backend.apis.film.vo.DescribeFilmInfoRespVO;
 import com.yasin.meetingfilm.backend.common.exception.CommonServiceException;
 import com.yasin.meetingfilm.backend.common.vo.BasePageVO;
 import com.yasin.meetingfilm.backend.common.vo.BaseResponseVO;
 import com.yasin.meetingfilm.backend.film.controller.vo.DescribeActorsRespVO;
-import com.yasin.meetingfilm.backend.film.controller.vo.DescribeFilmInfoRespVO;
 import com.yasin.meetingfilm.backend.film.controller.vo.DescribeFilmsRespVO;
 import com.yasin.meetingfilm.backend.film.controller.vo.FilmSaveReqVO;
 import com.yasin.meetingfilm.backend.film.services.IFilmService;
@@ -61,7 +61,7 @@ public class FilmController {
      * 根据电影编号查询电影信息接口
      */
     @RequestMapping(value = "/{filmId}", method = RequestMethod.GET)
-    public BaseResponseVO<Object> describeFilms(@PathVariable("filmId") Integer filmId) throws CommonServiceException {
+    public BaseResponseVO<Object> describeFilmById(@PathVariable("filmId") Integer filmId) throws CommonServiceException {
         DescribeFilmInfoRespVO describeFilmInfoRespVO = filmService.describeFilmInfoById(filmId);
         if (describeFilmInfoRespVO == null) {
             return BaseResponseVO.success();

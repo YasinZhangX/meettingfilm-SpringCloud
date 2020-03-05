@@ -1,4 +1,4 @@
-package com.yasin.meetingfilm.backend.film.controller.vo;
+package com.yasin.meetingfilm.backend.apis.film.vo;
 
 import lombok.Data;
 
@@ -7,7 +7,7 @@ import lombok.Data;
  */
 @Data
 public class DescribeFilmInfoRespVO {
-    private String filmId;
+    private Integer filmId;
     private String filmName;
     private String filmLength;
     private String filmCats;

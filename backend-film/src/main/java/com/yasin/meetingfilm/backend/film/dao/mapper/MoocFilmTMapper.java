@@ -3,7 +3,7 @@ package com.yasin.meetingfilm.backend.film.dao.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.yasin.meetingfilm.backend.film.controller.vo.DescribeFilmInfoRespVO;
+import com.yasin.meetingfilm.backend.apis.film.vo.DescribeFilmInfoRespVO;
 import com.yasin.meetingfilm.backend.film.controller.vo.DescribeFilmsRespVO;
 import com.yasin.meetingfilm.backend.film.dao.entity.MoocFilmT;
 import org.apache.ibatis.annotations.Param;

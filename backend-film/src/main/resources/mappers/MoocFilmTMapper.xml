@@ -33,7 +33,7 @@
         FROM mooc_film_t film LEFT JOIN mooc_film_info_t info ON film.UUID = info.film_id
     </select>
 
-    <select id="describeFilmById" parameterType="int" resultType="com.yasin.meetingfilm.backend.film.controller.vo.DescribeFilmInfoRespVO">
+    <select id="describeFilmById" parameterType="int" resultType="com.yasin.meetingfilm.backend.apis.film.vo.DescribeFilmInfoRespVO">
         SELECT film.UUID AS filmId,
                film.film_name AS filmName,
                info.film_length AS filmLength,
