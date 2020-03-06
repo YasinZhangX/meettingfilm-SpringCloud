@@ -8,7 +8,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpResponse;
-import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -17,7 +16,7 @@ import java.io.InputStream;
 /**
  * @author Yasin Zhang
  */
-@Component
+// @Component
 public class MyFallback implements FallbackProvider {
     /**
      * 针对哪个路由进行降级，return可以写 *
