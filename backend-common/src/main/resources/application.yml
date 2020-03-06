@@ -1,3 +1,6 @@
+server:
+  port: 8090
+
 mybatis-plus:
   mapper-locations: classpath*:mappers/*Mapper.xml
   global-config:
@@ -18,4 +21,3 @@ spring:
 
 logging:
   config: classpath:logback.xml
-

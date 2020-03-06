@@ -1,29 +1,3 @@
-server:
-  port: 7004
 
-spring:
-  application:
-    name: hall-service
-
-  datasource:
-    url: jdbc:mysql://47.108.82.29:3306/meetingfilm?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=UTC
-    username: yasin
-    password: Password@123
-    filters: log4j,wall,mergeStat
-
-logging:
-  config: classpath:logback.xml
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-
-mybatis-plus:
-  mapper-locations: classpath*:mappers/*Mapper.xml
-  global-config:
-    id-type: 0  #0:数据库ID自增   1:用户输入id  2:全局唯一id(IdWorker)  3:全局唯一ID(uuid)
-    db-column-underline: false
-    refresh-mapper: true
 
 

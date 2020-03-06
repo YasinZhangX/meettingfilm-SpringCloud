@@ -24,6 +24,7 @@
     <module>backend-cinema</module>
     <module>backend-hall</module>
     <module>backend-eureka-server</module>
+    <module>backend-apigw-zuul</module>
     <module>backend-testplatform</module>
   </modules>
 
