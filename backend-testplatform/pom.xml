@@ -17,6 +17,7 @@
     <module>backend-test-service-provider</module>
     <module>backend-test-service-consumer</module>
     <module>backend-test-hystrix</module>
+    <module>backend-test-testNG</module>
   </modules>
 
   <properties>

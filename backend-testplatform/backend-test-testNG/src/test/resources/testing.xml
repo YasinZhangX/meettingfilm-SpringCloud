@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<suite name="自动测试报告">
+  <test name="测试模块">
+    <classes>
+      <class name="com.yasin.meetingfilm.backend.testNG.demo.ReportTest" />
+      <class name="com.yasin.meetingfilm.backend.testNG.demo.Demo" />
+    </classes>
+  </test>
+
+  <test name="films">
+    <classes>
+      <class name="com.yasin.meetingfilm.backend.testNG.film.FilmTest" />
+    </classes>
+  </test>
+
+  <listeners>
+    <listener class-name="com.yasin.meetingfilm.backend.testNG.demo.conf.ExtentTestNGIReportListener" />
+  </listeners>
+
+</suite>
