@@ -20,7 +20,7 @@ public class CommandDemo extends HystrixCommand<String> {
         super(Setter.withGroupKey(HystrixCommandGroupKey.Factory.asKey("CommandHelloWorld"))
             .andCommandKey(HystrixCommandKey.Factory.asKey("CommandDemoKey"))
             .andCommandPropertiesDefaults(HystrixCommandProperties.defaultSetter()
-                .withRequestCacheEnabled(false)
+                .withRequestCacheEnabled(false)  // 开启缓存
                 // 线程池隔离还是信号量隔离
                 .withExecutionIsolationStrategy(HystrixCommandProperties.ExecutionIsolationStrategy.THREAD) // 请求缓存开关
 //                .withExecutionIsolationSemaphoreMaxConcurrentRequests(2)  // 最大同时处理的信号量个数

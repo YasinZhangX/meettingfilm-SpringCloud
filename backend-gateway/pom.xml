@@ -7,18 +7,10 @@
     <artifactId>backend-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>backend-testplatform</artifactId>
+  <artifactId>backend-gateway</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>backend-testplatform</name>
-  <description>后端测试平台</description>
-
-  <modules>
-    <module>backend-test-service-provider</module>
-    <module>backend-test-service-consumer</module>
-    <module>backend-test-hystrix</module>
-    <module>backend-test-testNG</module>
-  </modules>
+  <name>backend-gateway</name>
+  <description>meetingfilm后台网关模块</description>
 
   <properties>
     <java.version>1.8</java.version>
@@ -27,12 +19,24 @@
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <artifactId>spring-boot-starter-webflux</artifactId>
     </dependency>
 
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+      <artifactId>spring-cloud-starter-gateway</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-webflux</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- 公共工具类支持 -->
+    <dependency>
+      <groupId>com.yasin.meetingfilm</groupId>
+      <artifactId>backend-utils</artifactId>
     </dependency>
   </dependencies>
 

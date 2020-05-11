@@ -1,6 +1,6 @@
 <configuration>
   <!--自定义颜色配置-->
-  <conversionRule conversionWord="customColor" converterClass="com.yasin.meetingfilm.backend.common.config.LogbackColorful"/>
+  <conversionRule conversionWord="customColor" converterClass="com.yasin.meetingfilm.backend.utils.config.LogbackColorful"/>
 
   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
       <encoder>

@@ -17,6 +17,12 @@
   </properties>
 
   <dependencies>
+    <!-- spring web -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
     <!-- 静态页面支持 -->
     <dependency>
       <groupId>org.springframework.boot</groupId>

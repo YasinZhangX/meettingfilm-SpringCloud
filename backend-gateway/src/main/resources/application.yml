@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: springGateway-service
+
+  cloud:
+    gateway:
+      routes:
+        - id: yasin-predicate
+          uri: "http://www.taobao.com"
+          predicates:
+            - MyAfter=2018-01-01
+          filters:
+            - MyFilter=yasin,good
+
+logging:
+  config: classpath:logback.xml

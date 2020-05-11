@@ -1,4 +1,4 @@
-package com.yasin.meetingfilm.backend.common.config;
+package com.yasin.meetingfilm.backend.utils.config;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.spi.ILoggingEvent;

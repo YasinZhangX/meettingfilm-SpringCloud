@@ -25,6 +25,7 @@
     <module>backend-hall</module>
     <module>backend-eureka-server</module>
     <module>backend-apigw-zuul</module>
+    <module>backend-gateway</module>
     <module>backend-testplatform</module>
   </modules>
 
@@ -45,10 +46,6 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter</artifactId>
